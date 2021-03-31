@@ -7,7 +7,7 @@ div#wrap {
     margin: 40px auto;
 }
 
-fieldset#multiTab {
+fieldset#multiTab, fieldset#bgChange, fieldset#bulletMark {
     width: 700px;
     padding: 20px;
     border: 4px solid #ccc;
@@ -33,6 +33,9 @@ button {
     font-size: 16px;
     padding: 16px 40px;
     border: 1px solid #aaa;
+    outline: none;
+    /* 테두리선 border 인접외곽에 위치하는
+        2번째 테두리선 => 외곽선   outline */
     background-color: #fff;
     flex: 1;
 }
@@ -48,9 +51,6 @@ button:not(.selected) {
 }
 
 
-
-
-
 /* 버튼 사이의 파랑색 테두리선은 항상 파랑색 적용 */
 div#btnArea button:first-child {
   border-right: none;
@@ -58,3 +58,114 @@ div#btnArea button:first-child {
 div#btnArea button:last-child {
   border-left: 1px solid #08f;
 }
+
+
+
+
+
+
+
+
+/*/////////////////배경변경///////////////////////*/
+
+ul#memMainMenu {
+    list-style: none;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+}
+#memMainMenu>li {
+    text-align: center;
+    /*border: 1px solid #aaa;*/
+}
+#memMainMenu>li:nth-child(2n+1) {
+    flex: 1;
+}
+#memMainMenu a {
+    width: 100%;
+    height: 60px;
+    color: #222;
+    text-decoration: none;
+    /*border: 1px solid #0af;*/
+
+    display: inline-block;
+
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+
+    justify-content: center;
+    align-items: stretch;
+}
+
+#memMainMenu>li:nth-child(2n+1) span {
+    line-height: 60px;
+    /*border: 1px solid #f80;*/
+    display: inline-block;
+}
+
+#memMainMenu>li:nth-child(2n+1) span:first-child {
+    width: 60px;
+}
+#memMainMenu>li:nth-child(2n+1) span:last-child {
+    padding-left: 20px;
+}
+#memMainMenu>li:nth-child(2n) span {
+    height: 60px;
+    line-height: 60px;
+}
+
+#memMainMenu span#memJoinIcon {
+    border-radius: 60px;
+
+    background-image: url(../images/icon01.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#memMainMenu>li:nth-child(2n+1) a:hover {
+    color: #3289e8;
+}
+
+#memMainMenu a:hover span#memJoinIcon {
+    background-color: #3289e8;
+    background-image: url(../images/icon01_on.png);
+}
+
+
+
+
+
+
+
+/*/////////// 커스텀 리스트 불릿기호 //////////*/
+
+/* 방법 1 */
+ul#listBullet #method1 {
+    width: 140px;
+    list-style: none;
+    border: 1px solid #aaa;
+}
+ul#listBullet #method1::before {
+    content: "\2022";
+    color: #f80;
+    font-size: 30px;
+    border: 1px solid #000;
+    margin-right: 30px;
+    display: inline-block;
+}
+
+/* 방법 2 */
+ul#listBullet #method2::marker {
+    /* 마커 슈도엘리먼트 */
+    color: #08f;
+}
+
+
+
+
+

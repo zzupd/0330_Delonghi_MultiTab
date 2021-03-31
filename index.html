@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
@@ -16,7 +17,6 @@
             <legend class="legendStyle">
                 멀티탭
             </legend>
-
             <div id="btnArea">
                 <button type="button" class="selected">
                     이메일
@@ -25,15 +25,55 @@
                     멤버십 번호
                 </button>
             </div>
-
-
-
         </fieldset> <!-- fieldset#multiTab -->
 
+        <fieldset id="bgChange">
+            <legend class="legendStyle">
+                배경 변경하기
+            </legend>
+
+            <nav id="memberLNB">
+                <ul id="memMainMenu">
+                    <li>
+                        <a href="#">
+                            <span class="bgIcon" id="memJoinIcon"></span>
+                            <!-- 배경 이미지 아이콘 -->
+                            <span>회원가입</span>
+                        </a>
+                    </li>
+                    <li><span>|</span></li>
+                    <li>
+                        <a href="#">
+                            <span class="bgIcon" id="findIDIcon"></span>
+                            <!-- 배경 이미지 아이콘 -->
+                            <span>아이디 찾기</span>
+                        </a>
+                    </li>
+                    <li><span>|</span></li>
+                    <li>
+                        <a href="#">
+                            <span class="bgIcon" id="findPWIcon"></span>
+                            <!-- 배경 이미지 아이콘 -->
+                            <span>비밀번호 찾기</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+        </fieldset> <!-- fieldset#bgChange -->
 
 
+       <fieldset id="bulletMark">
+           <legend class="legendStyle">목록불릿기호</legend>
 
+            <ul id="listBullet">
+                <li id="method1">메뉴1</li>
+                <li id="method2">메뉴2</li>
+            </ul>
+       </fieldset>
     </div> <!-- div#wrap -->
 
 
-</body></html>
+</body>
+
+</html>
